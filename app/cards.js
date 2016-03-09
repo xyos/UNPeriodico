@@ -37,10 +37,10 @@ const Cards = React.createClass({
     );
     return (
       <ScrollView style={styles.scrollView}>
+        <Image source={{uri : base64Icon}} style={theme.cardImageStyle}/>
         <View style={styles.container}>
         {/* Here the magic happens*/}
           <View style={theme.cardStyle}>
-            <Image source={{uri : base64Icon}} style={theme.cardImageStyle}/>
             <Text style={theme.cardTitleStyle}>El reto es educar para la paz y con la paz</Text>
             <View  // TextView padding not handled well on Android https://github.com/facebook/react-native/issues/3233
               style={{

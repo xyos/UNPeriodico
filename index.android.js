@@ -7,6 +7,7 @@ import React, {
   Navigator,
   DrawerLayoutAndroid,
   TouchableOpacity,
+  Image,
   ToolbarAndroid,
   BackAndroid,
   Component,
@@ -16,7 +17,12 @@ import React, {
   View
 } from 'react-native';
 
-import {setTheme, MKColor} from 'react-native-material-kit';
+const MK = require('react-native-material-kit');
+const {
+  setTheme,
+  MKColor
+} = MK;
+import { Card, Button, COLOR, TYPO } from 'react-native-material-design';
 
 var Buttons = require('./app/buttons');
 var TextFields = require('./app/textfields');
@@ -35,24 +41,70 @@ setTheme({
 
 class Home extends Component{
   render() {
+    var base64Icon = 'http://unperiodico.unal.edu.co/uploads/pics/UNPeriodico191-150806-02_03.jpg';
+    var base64Icon2 = 'http://unperiodico.unal.edu.co/typo3temp/_processed_/csm_UNPeriodico191-150806-01_02_5448490e68.jpg';
+    var base64Icon3 = 'http://unperiodico.unal.edu.co/typo3temp/_processed_/csm_UNPeriodico191-150806-01_03_f8e9c5550e.jpg';
+    var base64Icon4 = 'http://unperiodico.unal.edu.co/typo3temp/_processed_/csm_UNPeriodico191-150806-02_96f1befe9c.jpg';
+    var base64Icon5 = 'http://unperiodico.unal.edu.co/typo3temp/_processed_/csm_UNPeriodico191-150806-01_04_7c64f9ff39.jpg';
     return (
       <ScrollView style={styles.list}
                   contentContainerStyle={styles.container}>
         <TouchableOpacity onPress={() => {
           this.props.navigator.push({
-            title: 'Buttons',
-            component: Buttons,
-          });
-        }}>
-          <Text style={styles.pushLabel}>Buttons</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => {
-          this.props.navigator.push({
-            title: 'Cards',
+            title: 'El reto es educar para la paz',
             component: Cards,
           });
         }}>
-          <Text style={styles.pushLabel}>Cards</Text>
+          <Card>
+              <Card.Media
+                  image={<Image source={{uri:base64Icon}} />}
+                  overlay
+              >
+                  <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey50]}>Portada</Text>
+                  <Text style={[TYPO.paperSubhead, COLOR.paperGrey50]}>El reto es educar para la paz</Text>
+              </Card.Media>
+              <Card.Body>
+                  <Text>Construir una cultura de la democracia y la pedagogía, para forjar estudiantes ciudadanos y crear una verdadera conciencia política en nuestra sociedad, es la gran recomendación que dejó el expresidente de Costa Rica y premio nobel de paz, Óscar Arias, en su paso por la Universidad Nacional. El reconocido líder defendió la negociación y el cese al fuego para llegar a un acuerdo de paz.</Text>
+              </Card.Body>
+          </Card>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {
+          this.props.navigator.push({
+            title: 'El reto es educar para la paz',
+            component: Cards,
+          });
+        }}>
+          <Card>
+              <Card.Media
+                  image={<Image source={{uri:base64Icon2}} />}
+                  overlay
+              >
+                  <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey50]}>Portada</Text>
+                  <Text style={[TYPO.paperSubhead, COLOR.paperGrey50]}>El reto es educar para la paz</Text>
+              </Card.Media>
+              <Card.Body>
+                  <Text>Construir una cultura de la democracia y la pedagogía, para forjar estudiantes ciudadanos y crear una verdadera conciencia política en nuestra sociedad, es la gran recomendación que dejó el expresidente de Costa Rica y premio nobel de paz, Óscar Arias, en su paso por la Universidad Nacional. El reconocido líder defendió la negociación y el cese al fuego para llegar a un acuerdo de paz.</Text>
+              </Card.Body>
+          </Card>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {
+          this.props.navigator.push({
+            title: 'El reto es educar para la paz',
+            component: Cards,
+          });
+        }}>
+          <Card>
+              <Card.Media
+                  image={<Image source={{uri:base64Icon3}} />}
+                  overlay
+              >
+                  <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey50]}>Portada</Text>
+                  <Text style={[TYPO.paperSubhead, COLOR.paperGrey50]}>El reto es educar para la paz</Text>
+              </Card.Media>
+              <Card.Body>
+                  <Text>Construir una cultura de la democracia y la pedagogía, para forjar estudiantes ciudadanos y crear una verdadera conciencia política en nuestra sociedad, es la gran recomendación que dejó el expresidente de Costa Rica y premio nobel de paz, Óscar Arias, en su paso por la Universidad Nacional. El reconocido líder defendió la negociación y el cese al fuego para llegar a un acuerdo de paz.</Text>
+              </Card.Body>
+          </Card>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {
           this.props.navigator.push({
@@ -64,27 +116,41 @@ class Home extends Component{
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {
           this.props.navigator.push({
-            title: 'Sliders',
-            component: Sliders,
+            title: 'El reto es educar para la paz',
+            component: Cards,
           });
         }}>
-          <Text style={styles.pushLabel}>Sliders</Text>
+          <Card>
+              <Card.Media
+                  image={<Image source={{uri:base64Icon4}} />}
+                  overlay
+              >
+                  <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey50]}>Portada</Text>
+                  <Text style={[TYPO.paperSubhead, COLOR.paperGrey50]}>El reto es educar para la paz</Text>
+              </Card.Media>
+              <Card.Body>
+                  <Text>Construir una cultura de la democracia y la pedagogía, para forjar estudiantes ciudadanos y crear una verdadera conciencia política en nuestra sociedad, es la gran recomendación que dejó el expresidente de Costa Rica y premio nobel de paz, Óscar Arias, en su paso por la Universidad Nacional. El reconocido líder defendió la negociación y el cese al fuego para llegar a un acuerdo de paz.</Text>
+              </Card.Body>
+          </Card>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {
           this.props.navigator.push({
-            title: 'Textfields',
-            component: TextFields,
+            title: 'El reto es educar para la paz',
+            component: Cards,
           });
         }}>
-          <Text style={styles.pushLabel}>Textfields</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => {
-          this.props.navigator.push({
-            title: 'Toggles',
-            component: Toggles,
-          });
-        }}>
-          <Text style={styles.pushLabel}>Toggles</Text>
+          <Card>
+              <Card.Media
+                  image={<Image source={{uri:base64Icon5}} />}
+                  overlay
+              >
+                  <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey50]}>Portada</Text>
+                  <Text style={[TYPO.paperSubhead, COLOR.paperGrey50]}>El reto es educar para la paz</Text>
+              </Card.Media>
+              <Card.Body>
+                  <Text>Construir una cultura de la democracia y la pedagogía, para forjar estudiantes ciudadanos y crear una verdadera conciencia política en nuestra sociedad, es la gran recomendación que dejó el expresidente de Costa Rica y premio nobel de paz, Óscar Arias, en su paso por la Universidad Nacional. El reconocido líder defendió la negociación y el cese al fuego para llegar a un acuerdo de paz.</Text>
+              </Card.Body>
+          </Card>
         </TouchableOpacity>
       </ScrollView>
     )
@@ -149,7 +215,7 @@ class unperiodico extends Component {
         />
         <ToolbarAndroid
           titleColor='#ffffff'
-          style={styles.toolbar}
+          style={styles.toolbarDetail}
           title={route.title}
           navIcon={require('./img/back.png')}
           onIconClicked={() => navigator.pop()}
@@ -226,6 +292,14 @@ class unperiodico extends Component {
 const styles = StyleSheet.create({
   toolbar: {
     backgroundColor: 'rgba(45,44,65,.98)',
+    height: 56,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+  },
+  toolbarDetail: {
+    backgroundColor: 'rgba(45,44,65,.28)',
     height: 56,
     position: 'absolute',
     top: 0,
